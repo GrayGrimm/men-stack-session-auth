@@ -27,9 +27,9 @@ app.use(morgan('dev'));
 
 app.use("/auth", authController)
 
-// app.get("/", async (req, res) => {
-//   res.render("index.ejs");
-// });
+app.get("/", async (req, res) => {
+  res.render("index.ejs");
+});
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
